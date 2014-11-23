@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleConsoleApp", "SimpleConsoleApp\SimpleConsoleApp.csproj", "{DD8E72B0-E1E6-453B-9D49-FC055B7E1A87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleApp", "SimpleApp", "{D2802E0F-ECAF-404D-96B3-255199D15DB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleClassLibrary", "SimpleClassLibrary\SimpleClassLibrary.csproj", "{2E023186-D8A6-466C-8A13-36C9CA1C777E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD8E72B0-E1E6-453B-9D49-FC055B7E1A87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD8E72B0-E1E6-453B-9D49-FC055B7E1A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD8E72B0-E1E6-453B-9D49-FC055B7E1A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD8E72B0-E1E6-453B-9D49-FC055B7E1A87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E023186-D8A6-466C-8A13-36C9CA1C777E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E023186-D8A6-466C-8A13-36C9CA1C777E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E023186-D8A6-466C-8A13-36C9CA1C777E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E023186-D8A6-466C-8A13-36C9CA1C777E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DD8E72B0-E1E6-453B-9D49-FC055B7E1A87} = {D2802E0F-ECAF-404D-96B3-255199D15DB5}
+		{2E023186-D8A6-466C-8A13-36C9CA1C777E} = {D2802E0F-ECAF-404D-96B3-255199D15DB5}
+	EndGlobalSection
+EndGlobal
