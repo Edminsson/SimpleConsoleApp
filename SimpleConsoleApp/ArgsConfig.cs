@@ -7,16 +7,24 @@ using CommandLine;
 
 namespace SimpleConsoleApp
 {
-    internal enum Case
+    public enum Case
     {
         Upper,
         Lower
     }
 
-
-    class ArgsConfig
+    public enum Order
     {
-        [Option('c',"case", Required=true, HelpText="upper/lower")]
+        asc,
+        desc
+    }
+
+
+    public class ArgsConfig
+    {
+        [Option('c',"case", HelpText="upper/lower")]
         public Case TargetCase { get; set; }
+        [Option('o', "order", HelpText = "asc/desc")]
+        public Order Order { get; set; }
     }
 }
