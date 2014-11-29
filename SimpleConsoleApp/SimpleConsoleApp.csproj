@@ -44,11 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WaitAndIncrement.cs" />
-    <Compile Include="WebArgsConfig.cs" />
+    <Compile Include="Event\WorkerWithEventHandler.cs" />
+    <Compile Include="Static\WaitAndIncrement.cs" />
     <Compile Include="ArgsConfig.cs" />
-    <Compile Include="WebWork.cs" />
-    <Compile Include="DoWork.cs" />
+    <Compile Include="WorkTemplate\WebArgsConfig.cs" />
+    <Compile Include="WorkTemplate\WebWork.cs" />
+    <Compile Include="WorkTemplate\DoWork.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

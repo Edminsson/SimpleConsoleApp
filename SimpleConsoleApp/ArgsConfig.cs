@@ -7,6 +7,13 @@ using CommandLine;
 
 namespace SimpleConsoleApp
 {
+    public enum Work
+    {
+        Static,
+        Template,
+        Event
+    }
+
     public enum Case
     {
         Upper,
@@ -22,9 +29,13 @@ namespace SimpleConsoleApp
 
     public class ArgsConfig
     {
-        [Option('c',"case", HelpText="upper/lower")]
+        [Option('w', "Work", DefaultValue=Work.Template,  HelpText = "Template/Static/Event")]
+        public Work Work { get; set; }
+        [Option('c', "case", HelpText = "upper/lower")]
         public Case TargetCase { get; set; }
         [Option('o', "order", HelpText = "asc/desc")]
         public Order Order { get; set; }
+        [Option('u', "url", HelpText = "Page Url")]
+        public string Uri { get; set; }
     }
 }

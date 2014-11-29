@@ -1,14 +1,9 @@
-﻿using SimpleClassLibrary;
-using System;
-using System.Collections.Generic;
+﻿using SimpleClassLibrary.WorkTemplates;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SimpleConsoleApp
+namespace SimpleConsoleApp.WorkTemplate
 {
     class WebWork : DoWorkTemplate<WebArgsConfig>
     {

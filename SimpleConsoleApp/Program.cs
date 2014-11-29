@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CommandLine;
+using SimpleConsoleApp.Static;
+using SimpleConsoleApp.WorkTemplate;
+using SimpleConsoleApp.Event;
 
 namespace SimpleConsoleApp
 {
@@ -12,13 +15,23 @@ namespace SimpleConsoleApp
     {
         static void Main(string[] args)
         {
-            //DoWork worker = new DoWork();
-            //WebWork worker = new WebWork();
-            //worker.Work(args, Console.Error, Console.In,Console.Out);
             ArgsConfig argsConfig = new ArgsConfig();
             CommandLine.Parser.Default.ParseArgumentsStrict(args, argsConfig);
-            WaitAndIncrement waitAndIncrement = new WaitAndIncrement(argsConfig.Order);
-            waitAndIncrement.Start();
+
+            switch(argsConfig.Work)
+            {
+                case Work.Event:
+                    WorkerWithEventHandler.Work();
+                    break;
+                case Work.Static:
+                    WaitAndIncrement.Start(argsConfig.Order);
+                    break;
+                case Work.Template:
+                    //DoWork worker = new DoWork();
+                    WebWork worker = new WebWork();
+                    worker.Work(args, Console.Error, Console.In,Console.Out);
+                    break;
+            }
             Console.WriteLine("Klart. Tryck på en knapp för att avsluta.");
             Console.ReadKey();
         }

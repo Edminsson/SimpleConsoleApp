@@ -1,11 +1,7 @@
-﻿using SimpleClassLibrary;
+﻿using SimpleClassLibrary.WorkTemplates;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SimpleConsoleApp
+namespace SimpleConsoleApp.WorkTemplate
 {
     class DoWork : DoWorkTemplate<ArgsConfig>
     {

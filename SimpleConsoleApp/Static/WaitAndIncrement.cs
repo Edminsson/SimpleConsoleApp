@@ -1,4 +1,4 @@
-﻿using SimpleClassLibrary;
+﻿using SimpleClassLibrary.StaticExamples;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,22 +6,15 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SimpleConsoleApp
+namespace SimpleConsoleApp.Static
 {
-    public class WaitAndIncrement
+    public static class WaitAndIncrement
     {
-        public int oka;
-        private Order order;
-        private Random random = new Random();
+        private static Random random = new Random();
 
-        public WaitAndIncrement(Order order)
+        public static void Start(Order order)
         {
-            this.order = order;
-        }
-
-        public void Start()
-        {
-            if (this.order == Order.asc)
+            if (order == Order.asc)
             {
                 var length = 10;
                 for (int i = 0; i < length; i++)
@@ -32,7 +25,7 @@ namespace SimpleConsoleApp
                     Console.WriteLine(StaticIncrement.Oka);
                 }
             }
-            else if (this.order == Order.desc)
+            else if (order == Order.desc)
             {
                 var length = 10;
                 StaticIncrement.Oka = 10;
