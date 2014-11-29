@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delegate\DelegateWork.cs" />
     <Compile Include="EventRelated\WorkProgressEventArgs.cs" />
     <Compile Include="EventRelated\WorkCompletedEventArgs.cs" />
     <Compile Include="WorkTemplates\DoWorkTemplate.cs" />

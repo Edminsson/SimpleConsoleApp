@@ -8,6 +8,7 @@ using CommandLine;
 using SimpleConsoleApp.Static;
 using SimpleConsoleApp.WorkTemplate;
 using SimpleConsoleApp.Event;
+using SimpleConsoleApp.Delegate;
 
 namespace SimpleConsoleApp
 {
@@ -22,6 +23,9 @@ namespace SimpleConsoleApp
             {
                 case Work.Event:
                     WorkerWithEventHandler.Work();
+                    break;
+                case Work.Delegate:
+                    WorkWithDelegate.DoSomeWork();
                     break;
                 case Work.Static:
                     WaitAndIncrement.Start(argsConfig.Order);

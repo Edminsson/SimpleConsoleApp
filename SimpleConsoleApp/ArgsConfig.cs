@@ -11,7 +11,8 @@ namespace SimpleConsoleApp
     {
         Static,
         Template,
-        Event
+        Event,
+        Delegate
     }
 
     public enum Case
@@ -29,7 +30,7 @@ namespace SimpleConsoleApp
 
     public class ArgsConfig
     {
-        [Option('w', "Work", DefaultValue=Work.Template,  HelpText = "Template/Static/Event")]
+        [Option('w', "Work", DefaultValue=Work.Template,  HelpText = "Template/Static/Event/Delegate")]
         public Work Work { get; set; }
         [Option('c', "case", HelpText = "upper/lower")]
         public Case TargetCase { get; set; }
