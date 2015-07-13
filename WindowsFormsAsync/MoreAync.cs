@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -247,6 +248,12 @@ namespace WindowsFormsAsync
             watch.Stop();
             simpleWriteToResult(string.Format("===Slut {0:HH:mm:ss.fff} ({1})===", DateTime.Now, watch.ElapsedMilliseconds));
         
+        }
+
+        private void btnAntalFiler_Click(object sender, EventArgs e)
+        {
+            var antal = Directory.GetFiles("c:\\tmp\\test","*.txt", SearchOption.AllDirectories).Length;
+            txtResult.Text = string.Format("Antal: {0}", antal);
         }
     
     }

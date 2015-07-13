@@ -40,6 +40,7 @@
             this.btnLoopTest = new System.Windows.Forms.Button();
             this.btnVisaKundlista = new System.Windows.Forms.Button();
             this.btnTaskRunTests = new System.Windows.Forms.Button();
+            this.btnAntalFiler = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAsync
@@ -160,11 +161,22 @@
             this.btnTaskRunTests.UseVisualStyleBackColor = true;
             this.btnTaskRunTests.Click += new System.EventHandler(this.btnTaskRunTests_Click);
             // 
+            // btnAntalFiler
+            // 
+            this.btnAntalFiler.Location = new System.Drawing.Point(396, 39);
+            this.btnAntalFiler.Name = "btnAntalFiler";
+            this.btnAntalFiler.Size = new System.Drawing.Size(75, 23);
+            this.btnAntalFiler.TabIndex = 12;
+            this.btnAntalFiler.Text = "Antal filer";
+            this.btnAntalFiler.UseVisualStyleBackColor = true;
+            this.btnAntalFiler.Click += new System.EventHandler(this.btnAntalFiler_Click);
+            // 
             // MoreAync
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 360);
+            this.Controls.Add(this.btnAntalFiler);
             this.Controls.Add(this.btnTaskRunTests);
             this.Controls.Add(this.btnVisaKundlista);
             this.Controls.Add(this.btnLoopTest);
@@ -198,5 +210,6 @@
         private System.Windows.Forms.Button btnLoopTest;
         private System.Windows.Forms.Button btnVisaKundlista;
         private System.Windows.Forms.Button btnTaskRunTests;
+        private System.Windows.Forms.Button btnAntalFiler;
     }
 }
