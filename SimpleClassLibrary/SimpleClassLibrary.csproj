@@ -45,6 +45,7 @@
     <Compile Include="Delegate\DelegateWork.cs" />
     <Compile Include="EventRelated\WorkProgressEventArgs.cs" />
     <Compile Include="EventRelated\WorkCompletedEventArgs.cs" />
+    <Compile Include="Interfaces\ITrabajo.cs" />
     <Compile Include="WorkTemplates\DoWorkTemplate.cs" />
     <Compile Include="EventRelated\DoSimpleWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

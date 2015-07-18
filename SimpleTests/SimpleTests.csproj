@@ -41,6 +41,9 @@
     <Reference Include="AutoMapper.Net4">
       <HintPath>..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
     </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1507.0118\lib\net40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -57,6 +60,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AutoMapperTest.cs" />
+    <Compile Include="MoqTests.cs" />
     <Compile Include="Models\AltLagVM.cs" />
     <Compile Include="Models\PlayerVM.cs" />
     <Compile Include="Models\SimpleLagVM.cs" />
@@ -70,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleClassLibrary\SimpleClassLibrary.csproj">
+      <Project>{2e023186-d8a6-466c-8a13-36c9ca1c777e}</Project>
+      <Name>SimpleClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -12,8 +12,11 @@ namespace ProcessConsole
     delegate void EgenDelegate(int uno, string dos);
     class Program
     {
+        static CancellationTokenSource cts;
         static void Main(string[] args)
         {
+
+            Console.CancelKeyPress += new ConsoleCancelEventHandler(myHandler);
 
             do
             {
@@ -26,6 +29,7 @@ namespace ProcessConsole
                 Console.WriteLine("Press 6 testa enkel continueWith");
                 Console.WriteLine("Press 7 testa async som inte returnerar resultat");
                 Console.WriteLine("Press 8 testa wait-problem");
+                Console.WriteLine("Press 9 testa enkel loop");
                 Console.WriteLine("Press 0 to exit");
 
                 var key = Console.ReadKey();
@@ -53,6 +57,8 @@ namespace ProcessConsole
                     t1.Wait();
                     Console.WriteLine("Main ended!!!!!!!!!!!!!");
                 }
+                else if (key.Key == ConsoleKey.D9)
+                    TestaTaskMedCancellation();
                 else
                     Console.WriteLine("No choice !!!!!!!");
 
@@ -61,6 +67,34 @@ namespace ProcessConsole
 
             } while(true);
 
+        }
+
+        private static void TestaTaskMedCancellation()
+        {
+            cts = new CancellationTokenSource();
+            Console.WriteLine("\r\nLoop som tar 10 sekunder startar.");
+            Console.WriteLine("Tryck på Ctrl+C för att avbryta.");
+            TaskWithCancellation tmc = new TaskWithCancellation();
+
+            try
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    var resultat = tmc.DoWork(cts.Token);
+                }
+            }
+            catch(OperationCanceledException)
+            {
+                Console.WriteLine("Du avbröt operationen");
+            }
+            Console.Write("Klar med loop");
+        }
+
+        private static void myHandler(object sender, ConsoleCancelEventArgs e)
+        {
+            Console.WriteLine("Du vill avbryta operationen. Var god vänta.");
+            cts.Cancel();
+            e.Cancel = true;
         }
 
         public static async Task Accept()
